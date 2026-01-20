@@ -1,0 +1,26 @@
+[project]
+name = "mre-pyproject-setuptools"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=80.0", "setuptools-scm>=9"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-dir]
+"" = "src"
+# 路径映射，便于用户通过有辨识度的方式导入模块而不是使用sdk或重命名
+mylib = "src/sdk"
+
+[dependency-groups]
+dev = ["pytest>=9.0.2"]
+
+# [tool.setuptools.packages.find]
+# where = ["src","mylib"]
+# include = ["sdk", "sdk*", "mylib", "mylib*"]
+
+[tool.setuptools]
+packages = ["mylib"]
