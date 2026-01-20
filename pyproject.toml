@@ -18,9 +18,9 @@ mylib = "src/sdk"
 [dependency-groups]
 dev = ["pytest>=9.0.2"]
 
-# [tool.setuptools.packages.find]
-# where = ["src","mylib"]
-# include = ["sdk", "sdk*", "mylib", "mylib*"]
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["sdk", "sdk*", "mylib", "mylib*"]
 
-[tool.setuptools]
-packages = ["mylib"]
+# [tool.setuptools]
+# packages = ["mylib"]
