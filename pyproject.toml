@@ -10,17 +10,17 @@ dependencies = []
 requires = ["setuptools>=80.0", "setuptools-scm>=9"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools.package-dir]
-"" = "src"
-# 路径映射，便于用户通过有辨识度的方式导入模块而不是使用sdk或重命名
-mylib = "src/sdk"
-
 [dependency-groups]
 dev = ["pytest>=9.0.2"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["sdk", "sdk*", "mylib", "mylib*"]
+include = ["mylib", "mylib*","sdk", "sdk*"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+# 路径映射，便于用户通过有辨识度的方式导入模块而不是使用sdk或重命名
+mylib = "src/sdk"
 
 # [tool.setuptools]
 # packages = ["mylib"]

@@ -4,6 +4,7 @@
 
 1. `clone the repo`
 2. `uv sync`
+3. `uv pip install -e .`
 3. `uv run main.py` or `uv run pytest`
 
 ### case not work
